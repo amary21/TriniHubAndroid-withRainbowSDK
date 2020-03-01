@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/colorPrimary"
+    android:animateLayoutChanges="true"
+    tools:context=".activity.splash.SplashActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutSplash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/bc_batik"
+            android:scaleType="fitCenter"/>
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Trini Hub"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/facebolf"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="40sp"/>
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spLoadingSplash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/txtTitle"
+                style="@style/SpinKitView.ThreeBounce"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvLayoutLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                app:cardCornerRadius="10dp"
+                android:visibility="invisible"
+                android:background="@android:color/white"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/facebolf"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:textSize="32sp"/>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputNama"
+                        style="@style/EditText.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="32dp"
+                        app:hintTextAppearance="@style/hintText"
+                        app:boxStrokeColor="@android:color/darker_gray">
+
+                        <EditText
+                            android:id="@+id/edtEmailLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textCursorDrawable="@drawable/shape_cursor"
+                            android:layout_gravity="start"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress"
+                            android:textAlignment="viewStart" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputJudul"
+                        style="@style/EditText.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="32dp"
+                        app:hintTextAppearance="@style/hintText"
+                        app:boxStrokeColor="@android:color/darker_gray">
+
+                        <EditText
+                            android:id="@+id/edtPasswordLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textCursorDrawable="@drawable/shape_cursor"
+                            android:layout_gravity="start"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:textAlignment="viewStart" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <TextView
+                        android:id="@+id/tvForgotPass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/forgout_your_password"
+                        android:textColor="@color/colorFontAccount2"
+                        android:visibility="gone"
+                        android:layout_gravity="right"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginEnd="32dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        tools:ignore="RtlHardcoded" />
+                    <com.github.ybq.android.spinkit.SpinKitView
+                        android:id="@+id/spLoadingLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:visibility="invisible"
+                        app:SpinKit_Color="@color/colorPrimary"
+                        android:layout_gravity="center"
+                        style="@style/SpinKitView.ThreeBounce"/>
+                    <TextView
+                        android:id="@+id/tvErrorLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:textColor="@android:color/holo_red_light"
+                        android:text=""
+                        android:fontFamily="@font/roboto_regular"
+                        android:visibility="gone"
+                        android:gravity="center"/>
+
+                    <Button
+                        android:id="@+id/btnLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="64dp"
+                        android:layout_marginStart="64dp"
+                        android:background="@drawable/shape_btn_login"
+                        android:text="@string/login"
+                        android:layout_marginBottom="8dp"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/roboto_bold"/>
+                    <TextView
+                        android:id="@+id/tvCreateUser"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorFontAccount2"
+                        android:text="@string/create_your_account"
+                        android:layout_margin="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

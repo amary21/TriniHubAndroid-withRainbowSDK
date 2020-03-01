@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.edit_profile.EditProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarChatRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="5dp"
+        app:layout_collapseMode="pin"
+        android:padding="4dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+    <ImageView
+        android:id="@+id/btnBackEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_arrow_back"
+        android:backgroundTint="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/edit_profile"
+            app:layout_collapseMode="pin"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <RelativeLayout
+                android:id="@+id/rlProfileEdit"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgViewProfile"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:visibility="invisible"
+                    android:scaleType="centerCrop"
+                    android:layout_centerInParent="true"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnAddPhotoEditProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabSize="normal"
+                    app:borderWidth="0dp"
+                    app:elevation="6dp"
+                    android:layout_alignEnd="@+id/imgViewProfile"
+                    android:backgroundTint="@android:color/darker_gray"
+                    android:background="@android:color/darker_gray"
+                    app:rippleColor="@android:color/darker_gray"
+                    android:src="@drawable/ic_photo_library"
+                    android:layout_alignParentBottom="true" />
+
+                <TextView
+                    android:id="@+id/tvNameProfileEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/roboto_bold"
+                    tools:text="TA"
+                    android:gravity="center"
+                    android:textColor="@color/colorFontAccount2"
+                    android:textSize="100sp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvBarPerson"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/btnEditProfilePerson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:drawablePadding="16dp"
+                    android:text="@string/person"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawableStart="@drawable/ic_person"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/btnEditProfilePerson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_edit"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:textStyle="bold"
+                    android:background="@color/colorPrimary"
+                    android:paddingBottom="8dp"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:id="@+id/txtFirstNameProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="16dp"
+                    android:layout_below="@+id/tvBarPerson"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:drawablePadding="16dp"
+                    android:textColor="@color/colorFontAccount2"
+                    android:text="@string/first_name"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_medium"/>
+
+                <TextView
+                    android:id="@+id/tvFirstNameProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="40dp"
+                    android:layout_below="@id/txtFirstNameProfile"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="8dp"
+                    android:drawablePadding="16dp"
+                    tools:text="taufik"
+                    android:fontFamily="@font/roboto_medium"/>
+
+                <TextView
+                    android:id="@+id/txtLastNameProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:layout_below="@+id/tvFirstNameProfile"
+                    android:paddingBottom="8dp"
+                    android:drawablePadding="16dp"
+                    android:textColor="@color/colorFontAccount2"
+                    android:text="@string/last_name"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_medium"/>
+
+                <TextView
+                    android:id="@+id/tvLastNameProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="16dp"
+                    android:layout_below="@id/txtLastNameProfile"
+                    android:paddingBottom="8dp"
+                    android:drawablePadding="16dp"
+                    tools:text="Amaryansyah"
+                    android:fontFamily="@font/roboto_medium"/>
+
+                <TextView
+                    android:id="@+id/txtNicknameProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="40dp"
+                    android:layout_below="@id/tvLastNameProfile"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:drawablePadding="16dp"
+                    android:textColor="@color/colorFontAccount2"
+                    android:text="@string/nickname"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_medium"/>
+
+                <TextView
+                    android:id="@+id/tvNicknameProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="16dp"
+                    android:layout_below="@+id/txtNicknameProfile"
+                    android:paddingBottom="8dp"
+                    android:drawablePadding="16dp"
+                    tools:text="taufik21"
+                    android:fontFamily="@font/roboto_medium"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvBarPhone"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/btnEditProfilePhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:drawablePadding="16dp"
+                    android:text="@string/phone_numbers"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawableStart="@drawable/ic_phone_android_white"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/btnEditProfilePhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_edit"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:textStyle="bold"
+                    android:background="@color/colorPrimary"
+                    android:paddingBottom="8dp"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:id="@+id/txtPhoneProfile"
+                    android:layout_below="@+id/tvBarPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:drawablePadding="16dp"
+                    android:textColor="@color/colorFontAccount2"
+                    android:text="@string/personal_numbers"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_medium"/>
+
+                <TextView
+                    android:id="@+id/tvPhoneProfile"
+                    android:layout_below="@+id/txtPhoneProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:drawablePadding="16dp"
+                    tools:text="085210851633"
+                    android:fontFamily="@font/roboto_medium"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvBarJob"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/btnEditJobPerson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:drawablePadding="16dp"
+                    android:text="@string/job"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_medium"
+                    android:drawableStart="@drawable/ic_work_white"
+                    android:textColor="@android:color/white"
+                    android:background="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/btnEditJobPerson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_edit"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:textStyle="bold"
+                    android:background="@color/colorPrimary"
+                    android:paddingBottom="8dp"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:id="@+id/txtJobTitleProfile"
+                    android:layout_below="@+id/tvBarJob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:drawablePadding="16dp"
+                    android:textColor="@color/colorFontAccount2"
+                    android:text="@string/job_title"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_medium"/>
+
+                <TextView
+                    android:id="@+id/tvJobTitleProfile"
+                    android:layout_below="@id/txtJobTitleProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="40dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:drawablePadding="16dp"
+                    tools:text="Enginer"
+                    android:fontFamily="@font/roboto_medium"/>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

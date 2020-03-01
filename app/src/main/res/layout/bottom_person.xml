@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/shape_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvBarPerson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:drawablePadding="24dp"
+        android:text="@string/person"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:drawableTint="@color/colorPrimary"
+        android:textColor="@color/colorPrimary"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:drawablePadding="24dp"
+        android:textColor="@color/colorFontAccount2"
+        android:text="@string/input_your_first_name"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <EditText
+        android:id="@+id/edtFirstNameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:paddingTop="8dp"
+        android:inputType="textPersonName"
+        android:layout_marginEnd="24dp"
+        android:paddingBottom="8dp"
+        android:drawablePadding="24dp"
+        android:hint="@string/first_name"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:drawablePadding="24dp"
+        android:textColor="@color/colorFontAccount2"
+        android:text="@string/input_your_last_name"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <EditText
+        android:id="@+id/edtLastNameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:inputType="textPersonName"
+        android:layout_marginEnd="24dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:drawablePadding="24dp"
+        android:hint="@string/last_name"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:drawablePadding="24dp"
+        android:textColor="@color/colorFontAccount2"
+        android:text="@string/input_your_nickname"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <EditText
+        android:id="@+id/edtNicknameEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:inputType="textPersonName"
+        android:paddingTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:paddingBottom="8dp"
+        android:drawablePadding="24dp"
+        android:hint="@string/nickname"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnBottomEditPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_button"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/save"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/roboto_black"/>
+
+        <Button
+            android:id="@+id/btnBottomCancelPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/btnBottomEditPerson"
+            android:background="@drawable/shape_button"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/roboto_black"/>
+    </RelativeLayout>
+</LinearLayout>

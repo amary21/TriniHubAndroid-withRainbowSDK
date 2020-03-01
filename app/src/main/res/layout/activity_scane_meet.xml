@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent"
+    tools:context=".activity.meeting.ScaneMeetActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true"
+        android:focusableInTouchMode="true"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <ImageView
+                android:id="@+id/btnBackDetailMeet"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/ic_arrow_back"
+                android:backgroundTint="@color/colorPrimary"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/titleM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scan_qr_code"
+        android:textAlignment="center"
+        android:fontFamily="@font/facebolf"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_above="@+id/message"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scane_qr_code_to_enter_n_the_meeting"
+        android:textAlignment="center"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@android:color/black"
+        android:layout_above="@+id/cvScan"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="10dp">
+
+            <com.budiyev.android.codescanner.CodeScannerView
+                android:id="@+id/scannerView"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spLoadingInvite"
+        style="@style/SpinKitView.ThreeBounce"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:SpinKit_Color="@color/colorPrimary"
+        android:layout_above="@+id/btnCheckInvitation"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/btnCheckInvitation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="80dp"
+        android:text="@string/check_invitation"
+        android:textColor="@android:color/white"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/shape_button"/>
+
+</RelativeLayout>

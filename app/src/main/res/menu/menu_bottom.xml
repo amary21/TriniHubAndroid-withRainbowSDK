@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btm_home"
+        android:icon="@drawable/btm_home"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/btm_meeting"
+        android:icon="@drawable/btm_meet"
+        android:title="@string/meeting"/>
+    <item
+        android:id="@+id/btm_chat"
+        android:icon="@drawable/btm_chat"
+        android:title="@string/chat"/>
+    <item
+        android:id="@+id/btm_channel"
+        android:icon="@drawable/btm_channel"
+        android:title="@string/channel"/>
+    <item
+        android:id="@+id/btm_account"
+        android:icon="@drawable/btm_account"
+        android:title="@string/account"/>
+</menu>

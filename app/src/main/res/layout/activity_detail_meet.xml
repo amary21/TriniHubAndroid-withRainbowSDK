@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    tools:context=".activity.meeting.DetailMeetActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bc_batik" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fitsSystemWindows="true"
+            android:focusableInTouchMode="true"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <ImageView
+                    android:id="@+id/btnBackDetailMeet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ic_arrow_back" />
+
+                <TextView
+                    android:id="@+id/tvTitleDetailMeet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/facebolf"
+                    android:textAppearance="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    tools:text="Name Title" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imgPhotoDetailMeet"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/no_image" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvCategoryDetailMeet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:drawableStart="@drawable/ic_format_list_bulleted"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/colorPrimaryDark"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    tools:ignore="UnusedAttribute"
+                    tools:text="Category Meet" />
+
+                <TextView
+                    android:id="@+id/tvDesDetailMeet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="8dp"
+                    tools:ignore="UnusedAttribute"
+                    tools:text="Description Meet" />
+
+                <TextView
+                    android:id="@+id/tvDateDetailMeet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawableStart="@drawable/ic_access_time"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/colorPrimaryDark"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    tools:ignore="UnusedAttribute"
+                    tools:text="Date Meet" />
+
+                <TextView
+                    android:id="@+id/tvTimeDetailMeet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    tools:ignore="UnusedAttribute"
+                    tools:text="Time Start - Time End" />
+
+                <TextView
+                    android:id="@+id/tvPlaceDetailMeet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawableStart="@drawable/ic_location_white"
+                    android:drawablePadding="8dp"
+                    android:drawableTint="@color/colorPrimaryDark"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    tools:ignore="UnusedAttribute"
+                    tools:text="Place Name" />
+
+                <TextView
+                    android:id="@+id/tvAdressDetailMeet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    tools:ignore="UnusedAttribute"
+                    tools:text="Adress" />
+
+                <Button
+                    android:id="@+id/btnGetMeet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="72dp"
+                    android:layout_marginEnd="72dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/shape_btn_login"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/enter_this_meeting"
+                    android:textColor="@color/colorPrimary"/>
+                <Button
+                    android:id="@+id/btnYouHaveMeet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="72dp"
+                    android:layout_marginEnd="72dp"
+                    android:layout_marginBottom="16dp"
+                    android:visibility="gone"
+                    android:background="@drawable/shape_btn_have"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/youre_already_to_come"
+                    android:textColor="@color/colorPrimary"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

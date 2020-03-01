@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/imgAvatarChannel"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="80dp"
+            android:src="@drawable/bc_channel"/>
+        <TextView
+            android:id="@+id/tvTitleChannel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            tools:text="Title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:fontFamily="@font/roboto_medium"/>
+        <TextView
+            android:id="@+id/tvDesChannel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingBottom="8dp"
+            tools:text="Description"
+            android:fontFamily="@font/roboto_light"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

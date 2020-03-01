@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#12cad6</color>
+    <color name="colorPrimaryDark">#0fabbc</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorIconBottom">#737474</color>
+    <color name="colorIconBottomActive">#48DBFB</color>
+    <color name="colorTranparant">#0048DBFB</color>
+    <color name="colorFont">#0fabbc</color>
+    <color name="colorFontAccount">#4f98ca</color>
+    <color name="colorFontAccount2">#0f4c75</color>
+    <color name="colorWhite">#FFFFFF</color>
+</resources>

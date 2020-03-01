@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgProfileChatTrue"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/shape_profile"
+        android:src="@drawable/ic_bottom_user_br"/>
+
+    <RelativeLayout
+        android:id="@+id/rlProfileChat"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:visibility="invisible"
+        android:layout_gravity="center|top"
+        android:background="@drawable/shape_profile">
+
+        <TextView
+            android:id="@+id/tvNameProfileChat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_bold"
+            android:textColor="@color/colorFontAccount2"
+            android:textSize="28sp"/>
+
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivPresenceStatus"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignBottom="@id/rlProfileChat"
+        android:layout_alignEnd="@id/rlProfileChat"
+        tool:src="#ff0000"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvNameProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:cardCornerRadius="10dp"
+        android:layout_toEndOf="@id/rlProfileChat">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvNameChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tool:text="nama profile"
+                android:maxLines="1"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/tvTimeChat"
+                android:ellipsize="end"
+                android:paddingTop="4dp"
+                android:fontFamily="@font/roboto_regular"
+                android:paddingBottom="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="8dp"/>
+            <TextView
+                android:id="@+id/tvTimeChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tool:text="10:00"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="0dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        app:cardCornerRadius="10dp"
+        android:layout_below="@+id/cvNameProfile"
+        android:layout_toEndOf="@id/rlProfileChat">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgCekStatusMessage"
+                android:layout_width="15dp"
+                android:layout_marginStart="8dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                tool:src="@drawable/ic_message_sent"/>
+
+
+            <TextView
+                android:id="@+id/tvChatRoom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tool:text="Isi Chat"
+                android:fontFamily="@font/roboto_regular"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="16dp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

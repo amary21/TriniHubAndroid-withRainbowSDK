@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.amary21.e_lapor.InsertActivity">
+    <item
+        android:id="@+id/mn_gnmeeting"
+        android:title="@string/general_meeting" />
+
+    <item
+        android:id="@+id/mn_scservice"
+        android:title="@string/social_service" />
+    <item
+        android:id="@+id/mn_discussion"
+        android:title="@string/discussion" />
+    <item
+        android:id="@+id/mn_festival"
+        android:title="@string/festival" />
+
+</menu>

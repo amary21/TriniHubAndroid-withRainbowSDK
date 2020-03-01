@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_content">
+
+    <TextView
+        android:id="@+id/tvBarJob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:drawablePadding="16dp"
+        android:text="@string/job"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:drawablePadding="16dp"
+        android:textColor="@color/colorFontAccount2"
+        android:text="@string/input_your_job"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <EditText
+        android:id="@+id/edtJobTitleEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:drawablePadding="16dp"
+        android:hint="@string/job_titile"
+        android:fontFamily="@font/roboto_medium"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnBottomEditJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_button"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/save"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/roboto_black"/>
+
+        <Button
+            android:id="@+id/btnBottomCancelJob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/btnBottomEditJob"
+            android:background="@drawable/shape_button"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/roboto_black"/>
+    </RelativeLayout>
+</LinearLayout>

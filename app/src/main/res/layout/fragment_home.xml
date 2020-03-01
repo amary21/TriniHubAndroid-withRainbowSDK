@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    tools:context=".activity.main.home.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vpFanArt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="8dp"
+                    android:clipToPadding="false"
+                    android:foregroundGravity="center"
+                    android:overScrollMode="never"
+                    app:layout_collapseMode="parallax" />
+
+                <com.make.dots.dotsindicator.DotsIndicator
+                    android:id="@+id/dotsIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="12dp"
+                    android:padding="6dp"
+                    app:dot_drawable="@drawable/ic_dot_darkgrey"
+                    app:dot_drawable_unselected="@drawable/ic_dot_lightgrey"
+                    app:dot_height="8dp"
+                    app:dot_margin="6dp"
+                    app:dot_width="8dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvTodayMeetingHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/today_s_meeting"
+                android:textColor="@android:color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHomeMeeting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_meet"/>
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    android:id="@+id/spLoadingMeetHome"
+                    style="@style/SpinKitView.ThreeBounce"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    app:SpinKit_Color="@color/colorPrimary" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvChannelHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/channel"
+                android:textColor="@android:color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHomeChannel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="horizontal"
+                    tools:listitem="@layout/item_channel" />
+
+                <com.github.ybq.android.spinkit.SpinKitView
+                    android:id="@+id/spLoadingChannelHome"
+                    style="@style/SpinKitView.ThreeBounce"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    app:SpinKit_Color="@color/colorPrimary" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

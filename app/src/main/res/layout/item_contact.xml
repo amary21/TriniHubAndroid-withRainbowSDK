@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgProfileContactTrue"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/shape_profile"
+        android:src="@drawable/ic_bottom_user_br"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rlProfileContact"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center|top"
+        android:background="@drawable/shape_profile"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvNameProfileContact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:textColor="@color/colorFontAccount2"
+            android:textSize="28sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvNameContact"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toEndOf="@+id/rlProfileContact"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_bold"
+        android:maxLines="1"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/imgRemoveContact"
+        app:layout_constraintStart_toEndOf="@+id/imgProfileContactTrue"
+        app:layout_constraintTop_toTopOf="parent"
+        tool:text="nama profile" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivPresenceStatusContact"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_below="@id/tvNameContact"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/rlProfileContact"
+        app:layout_constraintStart_toStartOf="@+id/tvNameContact"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameContact"
+        tool:src="#ff0000" />
+
+    <TextView
+        android:id="@+id/tvContactStatus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_condensed"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPresenceStatusContact"
+        app:layout_constraintEnd_toEndOf="@+id/tvNameContact"
+        app:layout_constraintStart_toEndOf="@+id/ivPresenceStatusContact"
+        app:layout_constraintTop_toTopOf="@+id/ivPresenceStatusContact"
+        tool:text="Status" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/imgRemoveContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="mini"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/ic_person_remove"
+        app:backgroundTint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/imgAddContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_person_add"
+        android:visibility="invisible"
+        app:fabSize="mini"
+        android:layout_marginEnd="4dp"
+        app:backgroundTint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
